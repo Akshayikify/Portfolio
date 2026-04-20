@@ -34,21 +34,157 @@
   <section class="text-gray-600 body-font">
   <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
     <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-        <br class="hidden lg:inline-block">readymade gluten
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hi,
+          I am Akshay
+        <br class="hidden lg:inline-block">Python Full Stack Developer
       </h1>
-      <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
+      <p class="mb-8 leading-relaxed">I create beautiful and functional websites with modern technologies. Currently pursuing engineering at MVJ College of Engineering.</p>
       <div class="flex justify-center">
-        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-        <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+        <a href="#"><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">See My Work</button></a>
+        <a href="#"><button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">About Me</button></a>
       </div>
     </div>
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img class="object-cover object-center rounded" alt="hero" src="{% static 'images/Myphoto.jpg' %}">
+      <img class="object-cover object-center rounded-2xl shadow-lg border-4 border-white" src="{% static 'images/Myphoto.jpg'%}">
+    </div>
+  </div>
+</section>
+<!-- About Section -->
+ <section class="bg-white py-16">
+  <div class="max-w-5xl mx-auto px-6">
+    
+    <h1 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+      About Me
+    </h1>
+
+    <p class="text-gray-600 text-lg text-center mb-10">
+      Hi! I'm a Python Full Stack Developer passionate about building scalable and modern web applications.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+      
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+        <h2 class="text-xl font-semibold mb-3 text-indigo-600">Education</h2>
+        <p class="text-gray-600">
+          Currently pursuing Computer Science and Engineering at MVJ College of Engineering.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+        <h2 class="text-xl font-semibold mb-3 text-indigo-600">Hobbies</h2>
+        <ul class="list-disc pl-5 text-gray-600">
+          <li>Coding</li>
+          <li>Listening to music</li>
+          <li>Reading tech blogs</li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-2 bg-gray-50 p-6 rounded-xl shadow-sm">
+        <h2 class="text-xl font-semibold mb-3 text-indigo-600">
+          Why I Code?
+        </h2>
+        <p class="text-gray-600">
+          I have a deep interest in coding despite coming from a different background. 
+          I believe consistency beats motivation — showing up every day is what drives my growth.
+        </p>
+      </div>
+
     </div>
   </div>
 </section>
 
+<!-- Skill Section -->
+ <section class="bg-gray-50 py-16">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+      My Skills
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Frontend -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-4">Frontend</h3>
+        <div class="space-y-3">
+          <p class="bg-gray-100 px-4 py-2 rounded">HTML</p>
+          <p class="bg-gray-100 px-4 py-2 rounded">CSS</p>
+          <p class="bg-gray-100 px-4 py-2 rounded">JavaScript</p>
+          <p class="bg-gray-100 px-4 py-2 rounded">Tailwind CSS</p>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-4">Backend</h3>
+        <div class="space-y-3">
+          <p class="bg-gray-100 px-4 py-2 rounded">Python (Django)</p>
+          <p class="bg-gray-100 px-4 py-2 rounded">REST APIs</p>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold text-indigo-600 mb-4">Database</h3>
+        <div class="space-y-3">
+          <p class="bg-gray-100 px-4 py-2 rounded">MySQL</p>
+          <p class="bg-gray-100 px-4 py-2 rounded">MongoDB</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+ <section class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+      My Projects
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Project 1 -->
+      <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="{% static 'images/project1.jpg' %}" class="w-full h-48 object-cover" alt="project">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Crypto Tracker</h3>
+          <p class="text-gray-600 mb-4">
+            A full-stack cryptocurrency tracking web app with live price updates and user portfolio management.
+          </p>
+          <a href="#" class="text-indigo-600 font-medium hover:underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="{% static 'images/project2.jpg' %}" class="w-full h-48 object-cover" alt="project">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Movie Recommendation System</h3>
+          <p class="text-gray-600 mb-4">
+            ML-based recommendation system using Apriori algorithm to suggest movies based on user preferences.
+          </p>
+          <a href="#" class="text-indigo-600 font-medium hover:underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
+        <img src="{% static 'images/project3.jpg' %}" class="w-full h-48 object-cover" alt="project">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Dijkstra Visualizer</h3>
+          <p class="text-gray-600 mb-4">
+            Interactive visualization tool to find shortest paths using Dijkstra’s algorithm on real maps.
+          </p>
+          <a href="#" class="text-indigo-600 font-medium hover:underline">View Project →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 <!-- Footer -->
  <footer class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
