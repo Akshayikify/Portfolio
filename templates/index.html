@@ -8,69 +8,101 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    /* Smooth scrolling for navigation links */
+    html {
+      scroll-behavior: smooth;
+    }
+    </style>
     <link rel="stylesheet" href="{% static 'style.css'%}">
     <title>Home</title>
 </head>
 <body>
     <!-- Navbar -->
-    <header class="text-gray-600 body-font">
+    <!-- Fixed Header Section -->
+<header class="text-gray-600 body-font fixed top-0 left-0 w-full bg-white shadow-md z-50">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href=''>
-      <span class="ml-3 text-xl">My Portfolio</span>
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="#">
+      <span class="ml-3 text-xl font-bold">My Portfolio</span>
     </a>
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-gray-900" href=#>Home</a>
-      <a class="mr-5 hover:text-gray-900" href=#>About</a>
-      <a class="mr-5 hover:text-gray-900" href=#>Experience</a>
-      <a class="mr-5 hover:text-gray-900" href=#>My Projects</a>
+      <a class="mr-5 hover:text-indigo-600 transition-colors" href="#">Home</a>
+      <a class="mr-5 hover:text-indigo-600 transition-colors" href="#about">About</a>
+      <a class="mr-5 hover:text-indigo-600 transition-colors" href="#skills">Skills</a>
+      <a class="mr-5 hover:text-indigo-600 transition-colors" href="#projects">My Projects</a>
     </nav>
-    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" href="#">Login
+    <button class="inline-flex items-center bg-indigo-500 text-white border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 transition">
+      Login
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
         <path d="M5 12h14M12 5l7 7-7 7"></path>
       </svg>
     </button>
   </div>
+</header>
 <!-- Hero section -->
-  <section class="text-gray-600 body-font">
-  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+<section id="home" class="text-gray-600 body-font pt-16 md:pt-0">
+  <div class="container mx-auto flex px-5 py-12 md:py-24 md:flex-row flex-col items-center">
+    
+    <!-- Text Content -->
     <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hi,
-          I am Akshay
-        <br class="hidden lg:inline-block">Python Full Stack Developer
+      <h1 class="title-font text-3xl sm:text-4xl md:text-5xl mb-4 font-bold text-gray-900">
+        Hi, I am Akshay
+        <br class="hidden lg:inline-block">
+        <span class="text-indigo-600">Python Full Stack Developer</span>
       </h1>
-      <p class="mb-8 leading-relaxed">I create beautiful and functional websites with modern technologies. Currently pursuing engineering at MVJ College of Engineering.</p>
-      <div class="flex justify-center">
-        <a href="#"><button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">See My Work</button></a>
-        <a href="#"><button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">About Me</button></a>
+      <p class="mb-8 leading-relaxed text-base md:text-lg">
+        I create beautiful and functional websites with modern technologies. 
+        Currently pursuing engineering at MVJ College of Engineering.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#projects">
+          <button class="w-full sm:w-auto inline-flex justify-center text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded-lg text-lg transition shadow-md">
+            See My Work
+          </button>
+        </a>
+        <a href="#about">
+          <button class="w-full sm:w-auto inline-flex justify-center text-gray-700 bg-gray-100 border-0 py-2 px-8 focus:outline-none hover:bg-gray-200 rounded-lg text-lg transition">
+            About Me
+          </button>
+        </a>
       </div>
     </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img class="object-cover object-center rounded-2xl shadow-lg border-4 border-white" src="{% static 'images/Myphoto.jpg'%}">
+
+    <!-- Image Container -->
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-full max-w-[350px] md:max-w-none">
+      <img class="object-cover object-center rounded-2xl shadow-xl border-4 border-white w-full h-auto" 
+           alt="Akshay - Python Developer" 
+           src="{% static 'images/Myphoto.jpg' %}">
     </div>
+
   </div>
 </section>
-<!-- About Section -->
- <section class="bg-white py-16">
-  <div class="max-w-5xl mx-auto px-6">
+
+ <!-- About Section -->
+<section id="about" class="bg-white py-12 md:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
     
-    <h1 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
       About Me
     </h1>
 
-    <p class="text-gray-600 text-lg text-center mb-10">
+    <p class="text-gray-600 text-base md:text-lg text-center mb-10 max-w-3xl mx-auto">
       Hi! I'm a Python Full Stack Developer passionate about building scalable and modern web applications.
     </p>
 
-    <div class="grid md:grid-cols-2 gap-10">
+    <!-- Responsive Grid: 1 column on mobile, 2 columns on medium screens and up -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
       
-      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+      <!-- Education Box -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
         <h2 class="text-xl font-semibold mb-3 text-indigo-600">Education</h2>
         <p class="text-gray-600">
           Currently pursuing Computer Science and Engineering at MVJ College of Engineering.
         </p>
       </div>
 
-      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+      <!-- Hobbies Box -->
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
         <h2 class="text-xl font-semibold mb-3 text-indigo-600">Hobbies</h2>
         <ul class="list-disc pl-5 text-gray-600">
           <li>Coding</li>
@@ -79,7 +111,8 @@
         </ul>
       </div>
 
-      <div class="md:col-span-2 bg-gray-50 p-6 rounded-xl shadow-sm">
+      <!-- Bottom Full-Width Box -->
+      <div class="md:col-span-2 bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-100">
         <h2 class="text-xl font-semibold mb-3 text-indigo-600">
           Why I Code?
         </h2>
@@ -94,41 +127,51 @@
 </section>
 
 <!-- Skill Section -->
- <section class="bg-gray-50 py-16">
-  <div class="max-w-6xl mx-auto px-6">
+<section id="skills" class="bg-gray-50 py-12 md:py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10 md:mb-16">
       My Skills
     </h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <!-- Updated Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
       <!-- Frontend -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-indigo-600 mb-4">Frontend</h3>
-        <div class="space-y-3">
-          <p class="bg-gray-100 px-4 py-2 rounded">HTML</p>
-          <p class="bg-gray-100 px-4 py-2 rounded">CSS</p>
-          <p class="bg-gray-100 px-4 py-2 rounded">JavaScript</p>
-          <p class="bg-gray-100 px-4 py-2 rounded">Tailwind CSS</p>
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+        <h3 class="text-xl font-bold text-indigo-600 mb-6 flex items-center">
+          <span class="w-2 h-6 bg-indigo-600 rounded-full mr-3"></span>
+          Frontend
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">HTML</p>
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">CSS</p>
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">JavaScript</p>
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">Tailwind CSS</p>
         </div>
       </div>
 
       <!-- Backend -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-indigo-600 mb-4">Backend</h3>
-        <div class="space-y-3">
-          <p class="bg-gray-100 px-4 py-2 rounded">Python (Django)</p>
-          <p class="bg-gray-100 px-4 py-2 rounded">REST APIs</p>
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+        <h3 class="text-xl font-bold text-indigo-600 mb-6 flex items-center">
+          <span class="w-2 h-6 bg-indigo-600 rounded-full mr-3"></span>
+          Backend
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">Python (Django)</p>
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">REST APIs</p>
         </div>
       </div>
 
       <!-- Database -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold text-indigo-600 mb-4">Database</h3>
-        <div class="space-y-3">
-          <p class="bg-gray-100 px-4 py-2 rounded">MySQL</p>
-          <p class="bg-gray-100 px-4 py-2 rounded">MongoDB</p>
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+        <h3 class="text-xl font-bold text-indigo-600 mb-6 flex items-center">
+          <span class="w-2 h-6 bg-indigo-600 rounded-full mr-3"></span>
+          Database
+        </h3>
+        <div class="flex flex-wrap gap-3">
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">MySQL</p>
+          <p class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-medium text-gray-700">MongoDB</p>
         </div>
       </div>
 
@@ -136,161 +179,188 @@
   </div>
 </section>
 
-<!-- Projects -->
- <section class="bg-white py-16">
-  <div class="max-w-6xl mx-auto px-6">
+<!-- Projects Section -->
+<section id="projects" class="bg-white py-12 md:py-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
-    <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10 md:mb-16">
       My Projects
     </h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <!-- Responsive Grid: 1 col on mobile, 2 cols on tablet, 3 cols on desktop -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
 
       <!-- Project 1 -->
-      <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-        <img src="{% static 'images/project1.jpg' %}" class="w-full h-48 object-cover" alt="project">
+       {% for project in projects%}
+      <div class="group bg-gray-50 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+        <div class="relative overflow-hidden">
+          <img src="{{ project.image.url }}" class="w-full h-48 md:h-56 object-cover group-hover:scale-105 transition-transform duration-500" alt="Crypto Tracker">
+        </div>
         <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Crypto Tracker</h3>
-          <p class="text-gray-600 mb-4">
-            A full-stack cryptocurrency tracking web app with live price updates and user portfolio management.
+          <h3 class="text-xl font-bold mb-2 text-gray-900">{{project.title}}</h3>
+          <p class="text-gray-600 mb-6 line-clamp-3">
+            {{ project.description }}
           </p>
-          <a href="#" class="text-indigo-600 font-medium hover:underline">View Project →</a>
+          <a href="{{ project.github_url }}" class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-700 transition-colors">
+            View Project 
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
         </div>
       </div>
+      {% endfor %}
+</section>
 
-      <!-- Project 2 -->
-      <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-        <img src="{% static 'images/project2.jpg' %}" class="w-full h-48 object-cover" alt="project">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Movie Recommendation System</h3>
-          <p class="text-gray-600 mb-4">
-            ML-based recommendation system using Apriori algorithm to suggest movies based on user preferences.
-          </p>
-          <a href="#" class="text-indigo-600 font-medium hover:underline">View Project →</a>
+<!-- Blog Section -->
+<section class="bg-gray-50 py-16">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-6">Blogs</h2>
+    <p class="text-gray-600">
+      No blogs yet. I will start sharing technical blogs soon 🚀
+    </p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="text-gray-600 body-font relative">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900">Get In Touch</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+        Have a question or want to work together? Send me a message!
+      </p>
+    </div>
+    
+    <div class="lg:w-1/2 md:w-2/3 mx-auto">
+      <!-- Added Form Tag with POST method -->
+      <form method="POST"  class="flex flex-wrap -m-2">
+        {% csrf_token %}
+        
+        <!-- Name Field: Full width on mobile (w-full), Half width on tablet+ (sm:w-1/2) -->
+        <div class="p-2 w-full sm:w-1/2">
+          <div class="relative">
+            <label for="name" class="leading-7 text-sm text-gray-600 font-medium">Name</label>
+            <input type="text" id="name" name="name" required class="w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
         </div>
-      </div>
 
-      <!-- Project 3 -->
-      <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition">
-        <img src="{% static 'images/project3.jpg' %}" class="w-full h-48 object-cover" alt="project">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold mb-2">Dijkstra Visualizer</h3>
-          <p class="text-gray-600 mb-4">
-            Interactive visualization tool to find shortest paths using Dijkstra’s algorithm on real maps.
-          </p>
-          <a href="#" class="text-indigo-600 font-medium hover:underline">View Project →</a>
+        <!-- Email Field -->
+        <div class="p-2 w-full sm:w-1/2">
+          <div class="relative">
+            <label for="email" class="leading-7 text-sm text-gray-600 font-medium">Email</label>
+            <input type="email" id="email" name="email" required class="w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
         </div>
-      </div>
 
+        <!-- Message Field -->
+        <div class="p-2 w-full">
+          <div class="relative">
+            <label for="message" class="leading-7 text-sm text-gray-600 font-medium">Message</label>
+            <textarea id="message" name="message" required class="w-full bg-gray-100 bg-opacity-50 rounded-lg border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-2 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="p-2 w-full">
+          <button type="submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-3 px-10 focus:outline-none hover:bg-indigo-600 rounded-lg text-lg font-semibold shadow-lg transition-all active:scale-95">
+            Send Message
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
+
 <!-- Footer -->
- <footer class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+ <footer class="text-gray-600 body-font bg-white border-t border-gray-100">
+  <div class="container px-5 py-16 md:py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    
+    <!-- Branding Section -->
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
-        <span class="ml-3 text-xl">Tailblocks</span>
+        <span class="ml-3 text-xl font-bold">Akshay's Portfolio</span>
       </a>
-      <p class="mt-2 text-sm text-gray-500">Air plant banjo lyft occupy retro adaptogen indego</p>
+      <p class="mt-2 text-sm text-gray-500">Building scalable web solutions with Python Django.</p>
     </div>
+
+    <!-- Links Section: Responsive grid 2 cols on mobile, 4 on desktop -->
     <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
+      
+      <!-- Quick Links -->
+      <div class="lg:w-1/4 md:w-1/2 w-1/2 px-4">
+        <h2 class="title-font font-bold text-gray-900 tracking-widest text-sm mb-3 uppercase">Navigation</h2>
+        <nav class="list-none mb-10 space-y-2">
+          <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Home</a></li>
+          <li><a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors">About</a></li>
+          <li><a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors">Skills</a></li>
+          <li><a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a></li>
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
+
+      <!-- Services/Focus -->
+      <div class="lg:w-1/4 md:w-1/2 w-1/2 px-4">
+        <h2 class="title-font font-bold text-gray-900 tracking-widest text-sm mb-3 uppercase">Specialization</h2>
+        <nav class="list-none mb-10 space-y-2">
+          <li><a class="text-gray-600">Web Development</a></li>
+          <li><a class="text-gray-600">API Design</a></li>
+          <li><a class="text-gray-600">Database Mgmt</a></li>
+          <li><a class="text-gray-600">UI/UX Design</a></li>
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
+
+      <!-- Resources -->
+      <div class="lg:w-1/4 md:w-1/2 w-1/2 px-4">
+        <h2 class="title-font font-bold text-gray-900 tracking-widest text-sm mb-3 uppercase">Tech Stack</h2>
+        <nav class="list-none mb-10 space-y-2">
+          <li><a class="text-gray-600">Python / Django</a></li>
+          <li><a class="text-gray-600">React JS</a></li>
+          <li><a class="text-gray-600">Tailwind CSS</a></li>
+          <li><a class="text-gray-600">MySQL / MongoDB</a></li>
         </nav>
       </div>
-      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
-        <nav class="list-none mb-10">
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">First Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
-          </li>
-          <li>
-            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
-          </li>
+
+      <!-- Contact Info -->
+      <div class="lg:w-1/4 md:w-1/2 w-1/2 px-4">
+        <h2 class="title-font font-bold text-gray-900 tracking-widest text-sm mb-3 uppercase">Connect With Me</h2>
+        <nav class="list-none mb-10 space-y-2">
+          <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">GitHub</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">LinkedIn</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Twitter</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-indigo-600 transition-colors">Tech Blog</a></li>
         </nav>
       </div>
+
     </div>
   </div>
-  <div class="bg-gray-100">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@knyttneve</a>
+
+  <!-- Bottom Bar -->
+  <div class="bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row items-center">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2026 Akshay Portfolio —
+        <a href="#" class="text-gray-600 ml-1">@akshay_dev</a>
       </p>
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-        <a class="text-gray-500">
+      
+      <!-- Social Media Icons -->
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors">
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
             <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
           </svg>
         </a>
-        <a class="ml-3 text-gray-500">
+        <a href="#" class="ml-3 text-gray-500 hover:text-indigo-600 transition-colors">
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
             <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
           </svg>
         </a>
-        <a class="ml-3 text-gray-500">
+        <a href="#" class="ml-3 text-gray-500 hover:text-indigo-600 transition-colors">
           <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
           </svg>
         </a>
-        <a class="ml-3 text-gray-500">
+        <a href="#" class="ml-3 text-gray-500 hover:text-indigo-600 transition-colors">
           <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
             <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
             <circle cx="4" cy="4" r="2" stroke="none"></circle>
