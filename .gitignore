@@ -26,3 +26,4 @@ static/
 .DS_Store
 .vscode/
 .idea/
+staticfiles/
